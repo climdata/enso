@@ -8,7 +8,9 @@ output:
   pdf_document: default
 ---
 
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ## ENSO
 
@@ -26,8 +28,7 @@ Rayner, N. A., Parker, D. E., Horton, E. B., Folland, C. K., Alexander, L. V., R
 
 
 
-
-```sh
+```{sh downloads}
  [ -f ./download/ihadisst1_nino3.4a.dat ] && mv -f ./download/ihadisst1_nino3.4a.dat ./download/ihadisst1_nino3.4a.dat.bck
  wget -q -P download "https://climexp.knmi.nl/data/ihadisst1_nino3.4a.dat"
  #remove first lines
@@ -43,8 +44,7 @@ sed -i '1s/^/ts,enso1,remove\n/' ./download/ihadisst1_nino3.4a.dat
 
 ## Convert to standard format
 
-
-```r
+```{r convert}
 library(reshape2)
 
 enso <- read.csv("./download/ihadisst1_nino3.4a.dat", sep=",")
@@ -69,21 +69,12 @@ write.table(ensoNew, file = "./csv/monthly_enso1.csv", append = FALSE, quote = T
 
 ## Plot diagramm
 
-
-```r
+```{r plot, echo=TRUE}
 require("ggplot2")
-```
-
-```
-## Loading required package: ggplot2
-```
-
-```r
 enso <- read.csv("./csv/monthly_enso1.csv", sep=",")
 mp <- ggplot() +
       geom_line(aes(y=enso$enso2, x=enso$ts), color="blue") +
       xlab("Year") + ylab("ENSO")
 mp
-```
 
-![](README_files/figure-html/plot-1.png)<!-- -->
+```
