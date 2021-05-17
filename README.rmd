@@ -21,9 +21,12 @@ https://climexp.knmi.nl/getindices.cgi?WMO=UKMOData/hadisst1_nino3.4a&STATION=NI
 https://climexp.knmi.nl/data/ihadisst1_nino3.4a.dat
 
 Rayner, N. A., Parker, D. E., Horton, E. B., Folland, C. K., Alexander, L. V., Rowell, D. P., Kent, E. C., Kaplan, A.  Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century J. Geophys. Res.Vol. 108, No. D14, 4407 10.1029/2002JD002670
-# supplementary_information :: Updates and supplementary information will be available from http://www.metoffice.gov.uk/hadobs/hadisst
-# comment :: Data restrictions: for academic research use only. Data are Crown copyright see (http://www.opsi.gov.uk/advice/crown-copyright/copyright-guidance/index.htm)
-# cdo :: Climate Data Operators version 1.9.10 (https://mpimet.mpg.de/cdo)
+
+supplementary_information :: Updates and supplementary information will be available from http://www.metoffice.gov.uk/hadobs/hadisst
+
+comment :: Data restrictions: for academic research use only. Data are Crown copyright see (http://www.opsi.gov.uk/advice/crown-copyright/copyright-guidance/index.htm)
+
+cdo :: Climate Data Operators version 1.9.10 (https://mpimet.mpg.de/cdo)
 
 
 
